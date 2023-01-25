@@ -14,3 +14,10 @@ app.use(routes);
 app.listen(PORT, () => {
   console.log(`App listening on port ${PORT}!`);
 });
+
+const dbCreate = require('./db/schema.sql');
+app.get('/api/ecommerse',(req,res) =>{
+  dbCreate.query(dbCreate,(err,data)=>{
+    res.send('res')
+  })
+})
