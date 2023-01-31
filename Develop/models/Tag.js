@@ -26,5 +26,5 @@ Tag.init(
   }
 );
 
-ProductTag.hasMany(Tag);
+
 module.exports = Tag;

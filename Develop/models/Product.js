@@ -13,7 +13,7 @@ Product.init(
     id:{
       type: DataTypes.INTEGER,
       primaryKey: true,
-      autoIncrement: true,
+      // autoIncrement: true,
       allowNull: false      
     },
     prduct_name: {
@@ -48,6 +48,5 @@ Product.init(
   }
 );
 
-Category.hasMany(Product);
 
 module.exports = Product;

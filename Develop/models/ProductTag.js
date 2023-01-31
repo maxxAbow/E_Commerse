@@ -1,6 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 
 const sequelize = require('../config/connection');
+const Product = require('./Product.js');
 
 class ProductTag extends Model {}
 
@@ -36,6 +37,5 @@ ProductTag.init(
   }
 );
 
-Product.hasMany(ProductTag);
 
 module.exports = ProductTag;
