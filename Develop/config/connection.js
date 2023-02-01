@@ -1,16 +1,15 @@
 require('dotenv').config();
 
 const Sequelize = require('sequelize');
-const mysql = require('mysql2');
 
 const sequelize = process.env.JAWSDB_URL
   ? new Sequelize(process.env.JAWSDB_URL)
   : new Sequelize(
     process.env.DB_PW,
     process.env.DATABASE,
-    mysql,
+    process.env.DB_USER,
     {
-      user: 'root',
+      user: 'DB_USER',
       password: 'DB_PW',
       database:'DATABASE',
       host: '127.0.0.1',
